@@ -6,13 +6,11 @@ if(isset($_GET['page'])){
 }else{
 	$page = 1;
 }
-
-$limit = 10; // 10 title per page
+$limit = 5; // 5 title per page
 $start = ($page - 1) * $limit;
 
 $total_title = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM tintuc"));
 $total_page = ceil($total_title/$limit);
-
 $query = "SELECT * FROM tintuc LIMIT ".$start.", ".$limit;
 $result = mysqli_query($conn, $query);
 echo "<div class=\"title\">";
@@ -26,7 +24,6 @@ for($i = 1; $i <= $total_page; $i++){
 }
 echo "</div>";
 ?>
- Chúng ta định dạng lại bằng CSS
 	<style type="text/css">
 body{
   background: #ecf0f1;
@@ -43,9 +40,8 @@ a:hover{
   margin: 0 auto;
   margin-bottom: 20px;
 }
-
 .title{
-  background: #3498db;
+  background: yellowgreen;
   padding: 20px;
   line-height: 1.5;
 }

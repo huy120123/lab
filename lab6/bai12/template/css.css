@@ -14,16 +14,20 @@ a:hover, a:active{
 }
 
 #container{
-	width: 900px;
+	width: 700px;
 	margin: 20px auto;
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #7f8c8d;
 	background: #fff;
+
 }
 #product-img{
 	float: left;
 	width: 70%;
+}
+#product-img img{
+    width: 300px;
 }
 #rating-info{
 	float: left;

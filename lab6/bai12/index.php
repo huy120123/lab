@@ -1,5 +1,5 @@
 <?php
-include("funtions.php");
+include("function.php");
 
 if(isset($_GET['id'])){
 	$id=$_GET['id'];
@@ -17,5 +17,4 @@ if(isset($_GET['id'])){
 	$html = listProduct();
 	include("template/list-products.php");
 }
-
 ?>
